@@ -20,7 +20,7 @@ import (
 	"github.com/pion/interceptor"
 	"github.com/pion/interceptor/pkg/intervalpli"
 	"github.com/pion/rtp"
-	"github.com/pion/webrtc/v4"
+	"github.com/Psiphon-Labs/pion-webrtc/v4"
 )
 
 type udpConn struct {

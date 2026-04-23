@@ -12,8 +12,8 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/pion/ice/v4"
-	"github.com/pion/webrtc/v4"
+	"github.com/Psiphon-Labs/pion-ice/v4"
+	"github.com/Psiphon-Labs/pion-webrtc/v4"
 )
 
 var api *webrtc.API //nolint

@@ -19,7 +19,7 @@ import (
 	"github.com/pion/logging"
 	"github.com/pion/rtp"
 	"github.com/pion/transport/v4/test"
-	"github.com/pion/webrtc/v4/pkg/media"
+	"github.com/Psiphon-Labs/pion-webrtc/v4/pkg/media"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

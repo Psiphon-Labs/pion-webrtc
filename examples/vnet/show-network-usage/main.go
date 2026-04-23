@@ -16,7 +16,7 @@ import (
 
 	"github.com/pion/logging"
 	"github.com/pion/transport/v4/vnet"
-	"github.com/pion/webrtc/v4"
+	"github.com/Psiphon-Labs/pion-webrtc/v4"
 )
 
 /* VNet Configuration

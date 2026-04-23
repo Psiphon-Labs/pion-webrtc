@@ -5,9 +5,11 @@ package webrtc
 
 import (
 	"net"
+	"time"
 
-	"github.com/pion/ice/v4"
+	"github.com/Psiphon-Labs/pion-ice/v4"
 	"github.com/pion/logging"
+	"github.com/pion/transport/v4"
 )
 
 // NewICETCPMux creates a new instance of ice.TCPMuxDefault. It enables use of
@@ -26,5 +28,22 @@ func NewICEUDPMux(logger logging.LeveledLogger, udpConn net.PacketConn) ice.UDPM
 	return ice.NewUDPMuxDefault(ice.UDPMuxParams{
 		UDPConn: udpConn,
 		Logger:  logger,
+	})
+}
+
+// [Psiphon] from https://github.com/pion/webrtc/pull/2298
+// NewICEUniversalUDPMux creates a new instance of ice.UniversalUDPMuxDefault,
+// which supports host, server reflexive, and relayed candidates over a single UDP port.
+func NewICEUniversalUDPMux(
+	logger logging.LeveledLogger,
+	udpConn net.PacketConn,
+	xorMappedAddrCacheTTL time.Duration,
+	transportNet transport.Net,
+) ice.UniversalUDPMux {
+	return ice.NewUniversalUDPMuxDefault(ice.UniversalUDPMuxParams{
+		Logger:                logger,
+		UDPConn:               udpConn,
+		XORMappedAddrCacheTTL: xorMappedAddrCacheTTL,
+		Net:                   transportNet,
 	})
 }

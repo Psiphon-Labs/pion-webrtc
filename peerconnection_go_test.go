@@ -24,15 +24,15 @@ import (
 	"time"
 
 	"github.com/pion/dtls/v3"
-	"github.com/pion/ice/v4"
+	"github.com/Psiphon-Labs/pion-ice/v4"
 	"github.com/pion/logging"
 	"github.com/pion/rtcp"
 	"github.com/pion/rtp"
 	"github.com/pion/transport/v4/test"
 	"github.com/pion/transport/v4/vnet"
 	"github.com/pion/turn/v4"
-	"github.com/pion/webrtc/v4/internal/util"
-	"github.com/pion/webrtc/v4/pkg/rtcerr"
+	"github.com/Psiphon-Labs/pion-webrtc/v4/internal/util"
+	"github.com/Psiphon-Labs/pion-webrtc/v4/pkg/rtcerr"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

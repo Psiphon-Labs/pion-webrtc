@@ -16,7 +16,7 @@ import (
 	"time"
 
 	"github.com/pion/randutil"
-	"github.com/pion/webrtc/v4"
+	"github.com/Psiphon-Labs/pion-webrtc/v4"
 )
 
 func signalCandidate(addr string, candidate *webrtc.ICECandidate) error {

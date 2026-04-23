@@ -15,7 +15,7 @@ import (
 
 	"github.com/pion/datachannel"
 	"github.com/pion/logging"
-	"github.com/pion/webrtc/v4/pkg/rtcerr"
+	"github.com/Psiphon-Labs/pion-webrtc/v4/pkg/rtcerr"
 )
 
 var errSCTPNotEstablished = errors.New("SCTP not established")

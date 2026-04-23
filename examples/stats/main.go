@@ -20,7 +20,7 @@ import (
 
 	"github.com/pion/interceptor"
 	"github.com/pion/interceptor/pkg/stats"
-	"github.com/pion/webrtc/v4"
+	"github.com/Psiphon-Labs/pion-webrtc/v4"
 )
 
 // How ofter to print WebRTC stats.

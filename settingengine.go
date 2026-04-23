@@ -13,10 +13,10 @@ import (
 	"net"
 	"time"
 
+	"github.com/Psiphon-Labs/pion-ice/v4"
 	"github.com/pion/dtls/v3"
 	dtlsElliptic "github.com/pion/dtls/v3/pkg/crypto/elliptic"
 	"github.com/pion/dtls/v3/pkg/protocol/handshake"
-	"github.com/pion/ice/v4"
 	"github.com/pion/logging"
 	"github.com/pion/stun/v3"
 	"github.com/pion/transport/v4"
@@ -102,6 +102,8 @@ type SettingEngine struct {
 	LoggerFactory                             logging.LoggerFactory
 	iceTCPMux                                 ice.TCPMux
 	iceUDPMux                                 ice.UDPMux
+	// [Psiphon] from https://github.com/pion/webrtc/pull/2298
+	iceUDPMuxSrflx                            ice.UniversalUDPMux
 	iceProxyDialer                            proxy.Dialer
 	iceDisableActiveTCP                       bool
 	iceBindingRequestHandler                  func(m *stun.Message, local, remote ice.Candidate, pair *ice.CandidatePair) bool //nolint:lll
@@ -475,6 +477,13 @@ func (e *SettingEngine) SetICETCPMux(tcpMux ice.TCPMux) {
 // UDPMux should be started prior to creating PeerConnections.
 func (e *SettingEngine) SetICEUDPMux(udpMux ice.UDPMux) {
 	e.iceUDPMux = udpMux
+}
+
+// [Psiphon] from https://github.com/pion/webrtc/pull/2298
+// SetICEUDPMuxSrflx sets the mux to be used for server reflexive
+// candidates, enabling multiplexing of STUN requests over a single UDP port.
+func (e *SettingEngine) SetICEUDPMuxSrflx(udpMuxSrflx ice.UniversalUDPMux) {
+	e.iceUDPMuxSrflx = udpMuxSrflx
 }
 
 // SetICEProxyDialer sets the proxy dialer interface based on golang.org/x/net/proxy.

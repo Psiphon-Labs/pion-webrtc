@@ -13,7 +13,7 @@ import (
 
 	"github.com/pion/rtp"
 	"github.com/pion/sdp/v3"
-	"github.com/pion/webrtc/v4/internal/fmtp"
+	"github.com/Psiphon-Labs/pion-webrtc/v4/internal/fmtp"
 )
 
 // RTPTransceiver represents a combination of an RTPSender and an RTPReceiver that share a common mid.

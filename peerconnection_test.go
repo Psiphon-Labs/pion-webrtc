@@ -12,7 +12,7 @@ import (
 
 	"github.com/pion/sdp/v3"
 	"github.com/pion/transport/v4/test"
-	"github.com/pion/webrtc/v4/pkg/rtcerr"
+	"github.com/Psiphon-Labs/pion-webrtc/v4/pkg/rtcerr"
 	"github.com/stretchr/testify/assert"
 )
 

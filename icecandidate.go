@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/pion/ice/v4"
+	"github.com/Psiphon-Labs/pion-ice/v4"
 )
 
 // ICECandidate represents a ice candidate.

@@ -17,7 +17,7 @@ import (
 	"github.com/pion/dtls/v3"
 	"github.com/pion/dtls/v3/pkg/crypto/elliptic"
 	"github.com/pion/dtls/v3/pkg/protocol/handshake"
-	"github.com/pion/ice/v4"
+	"github.com/Psiphon-Labs/pion-ice/v4"
 	"github.com/pion/stun/v3"
 	"github.com/pion/transport/v4/test"
 	"github.com/stretchr/testify/assert"

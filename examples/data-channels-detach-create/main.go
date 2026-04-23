@@ -18,7 +18,7 @@ import (
 	"time"
 
 	"github.com/pion/randutil"
-	"github.com/pion/webrtc/v4"
+	"github.com/Psiphon-Labs/pion-webrtc/v4"
 )
 
 const messageSize = 15

@@ -15,7 +15,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/pion/ice/v4"
+	"github.com/Psiphon-Labs/pion-ice/v4"
 	"github.com/pion/logging"
 	"github.com/pion/stun/v3"
 	"github.com/pion/transport/v4/test"

@@ -18,7 +18,7 @@ import (
 	"time"
 
 	"github.com/pion/rtcp"
-	"github.com/pion/webrtc/v4"
+	"github.com/Psiphon-Labs/pion-webrtc/v4"
 )
 
 // nolint:gocognit, cyclop

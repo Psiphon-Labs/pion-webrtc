@@ -6,7 +6,7 @@ package webrtc
 import (
 	"testing"
 
-	"github.com/pion/ice/v4"
+	"github.com/Psiphon-Labs/pion-ice/v4"
 	"github.com/stretchr/testify/assert"
 )
 

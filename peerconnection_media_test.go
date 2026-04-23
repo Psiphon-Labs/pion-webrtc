@@ -26,9 +26,9 @@ import (
 	"github.com/pion/sdp/v3"
 	"github.com/pion/transport/v4/test"
 	"github.com/pion/transport/v4/vnet"
-	"github.com/pion/webrtc/v4/internal/fmtp"
-	"github.com/pion/webrtc/v4/internal/util"
-	"github.com/pion/webrtc/v4/pkg/media"
+	"github.com/Psiphon-Labs/pion-webrtc/v4/internal/fmtp"
+	"github.com/Psiphon-Labs/pion-webrtc/v4/internal/util"
+	"github.com/Psiphon-Labs/pion-webrtc/v4/pkg/media"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

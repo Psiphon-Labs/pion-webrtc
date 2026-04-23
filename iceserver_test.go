@@ -10,7 +10,7 @@ import (
 	"testing"
 
 	"github.com/pion/stun/v3"
-	"github.com/pion/webrtc/v4/pkg/rtcerr"
+	"github.com/Psiphon-Labs/pion-webrtc/v4/pkg/rtcerr"
 	"github.com/stretchr/testify/assert"
 )
 

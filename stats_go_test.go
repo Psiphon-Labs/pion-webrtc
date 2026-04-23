@@ -15,8 +15,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/pion/ice/v4"
-	"github.com/pion/webrtc/v4/pkg/media"
+	"github.com/Psiphon-Labs/pion-ice/v4"
+	"github.com/Psiphon-Labs/pion-webrtc/v4/pkg/media"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

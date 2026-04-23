@@ -12,7 +12,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/pion/ice/v4"
+	"github.com/Psiphon-Labs/pion-ice/v4"
 	"github.com/pion/logging"
 	"github.com/pion/stun/v3"
 )
@@ -255,6 +255,7 @@ func (g *ICEGatherer) baseAgentOptions(mDNSMode ice.MulticastDNSMode) []ice.Agen
 		ice.WithMulticastDNSMode(mDNSMode),
 		ice.WithTCPMux(g.api.settingEngine.iceTCPMux),
 		ice.WithUDPMux(g.api.settingEngine.iceUDPMux),
+		ice.WithUDPMuxSrflx(g.api.settingEngine.iceUDPMuxSrflx), // [Psiphon]
 		ice.WithProxyDialer(g.api.settingEngine.iceProxyDialer),
 		ice.WithBindingRequestHandler(g.api.settingEngine.iceBindingRequestHandler),
 	}
